@@ -5,4 +5,5 @@ export interface NotificationCardProps {
   theme: any;
   styles: any;
   onPressItem: (planId?: number | string) => void;
+  deleteNotification: (id: string) => Promise<void>;
 }

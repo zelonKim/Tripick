@@ -38,7 +38,7 @@ export default function MyPageScreen() {
   const { isDarkMode, toggleDarkMode } = useAppTheme();
 
   const theme = {
-    container: { backgroundColor: isDarkMode ? "#111827" : "#F9FAFB" },
+    container: { backgroundColor: isDarkMode ? "#111827" : "#F0F9FF" },
     header: {
       backgroundColor: isDarkMode ? "#1F2937" : "#FFFFFF",
       borderBottomWidth: 1,
@@ -95,10 +95,20 @@ export default function MyPageScreen() {
       },
     });
 
-  const handleSendFeedback = () => {
-    const trimmedFeedback = feedbackText.trim();
+  const handleSendFeedback = (feedback: string) => {
+    const trimmedFeedback = feedback.trim();
+
     if (!trimmedFeedback) {
       Alert.alert("안내", "피드백 내용을 입력해 주세요.");
+      return;
+    }
+    if (trimmedFeedback.length < 5) {
+      Alert.alert("안내", "피드백 내용은 5자 이상으로 작성해 주세요.");
+      return;
+    }
+
+    if (trimmedFeedback.length > 300) {
+      Alert.alert("안내", "피드백 내용은 300자 이하로 작성해 주세요.");
       return;
     }
     feedbackMutation(trimmedFeedback);
@@ -152,8 +162,8 @@ export default function MyPageScreen() {
       },
     });
 
-  const handleSaveNickname = () => {
-    const trimmedNickname = inputNickname.trim();
+  const handleSaveNickname = (nickname: string) => {
+    const trimmedNickname = nickname.trim();
     if (!trimmedNickname) {
       Alert.alert("안내", "닉네임을 입력해 주세요.");
       return;
@@ -168,7 +178,7 @@ export default function MyPageScreen() {
       <View
         style={[styles.header, theme.header, { paddingTop: insets.top + 20 }]}
       >
-        <Text style={[styles.headerTitle, theme.textMain]}>마이페이지</Text>
+        <Text style={[styles.headerTitle, theme.textMain]}>마이페이지 </Text>
       </View>
 
       <ScrollView
@@ -213,7 +223,7 @@ export default function MyPageScreen() {
                         onPress={openNicknameModal}
                       >
                         <Text style={styles.setNicknameButtonText}>
-                          닉네임 만들기 ✏️
+                          닉네임 만들기
                         </Text>
                       </TouchableOpacity>
                     )}
@@ -360,7 +370,7 @@ export default function MyPageScreen() {
         </View>
 
         {/* 앱 버전 정보 표시 */}
-        <Text style={styles.versionText}>버전 정보 v1.0.0 (최신 버전)</Text>
+        <Text style={styles.versionText}>버전 정보 v1.0.1</Text>
       </ScrollView>
 
       <NicknameModal
@@ -434,15 +444,15 @@ const styles = StyleSheet.create({
   editBadgeText: { fontSize: 11, fontWeight: "600" },
   setNicknameButton: {
     backgroundColor: "#EFF6FF",
-    paddingHorizontal: 12,
-    paddingVertical: 6,
+    paddingHorizontal: 10,
+    paddingVertical: 3,
     borderRadius: 8,
     borderWidth: 1,
     borderColor: "#BFDBFE",
     alignSelf: "flex-start",
     marginBottom: 4,
   },
-  setNicknameButtonText: { fontSize: 14, fontWeight: "600", color: "#2563EB" },
+  setNicknameButtonText: { fontSize: 12, fontWeight: "600", color: "#2563EB" },
   profileEmail: { fontSize: 13, fontWeight: "500" },
   loadingSpinner: { alignSelf: "flex-start", marginTop: 4 },
   dividerLight: { height: 1, marginVertical: 14 },
@@ -453,7 +463,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   badgeSectionTitle: { fontSize: 13, fontWeight: "600", marginLeft: 6 },
-  badgeRow: { flexDirection: "row", flexWrap: "wrap", gap: 12 },
+  badgeRow: { flexDirection: "row", flexWrap: "nowrap", gap: 12 },
   personaBadge: {
     paddingHorizontal: 12,
     paddingVertical: 6,

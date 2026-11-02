@@ -135,7 +135,7 @@ export default function SignupPage() {
         </form>
 
         <p
-          className={`text-center text-sm font-medium ${
+          className={`text-center text-[15px] font-medium ${
             isDarkMode ? "text-gray-400" : "text-gray-500"
           }`}
         >

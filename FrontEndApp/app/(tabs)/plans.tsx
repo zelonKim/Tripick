@@ -26,7 +26,7 @@ export default function PlansScreen() {
   const { isDarkMode } = useAppTheme();
 
   const theme = {
-    container: { backgroundColor: isDarkMode ? "#111827" : "#F9FAFB" },
+    container: { backgroundColor: isDarkMode ? "#111827" : "#F0F9FF" },
     textMain: { color: isDarkMode ? "#F9FAFB" : "#111827" },
     textSub: { color: isDarkMode ? "#9CA3AF" : "#6B7280" },
     cardBg: {

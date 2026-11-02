@@ -126,7 +126,7 @@ export default function GeneratedPlanPage() {
   return (
     <div
       className={`min-h-screen pb-12 transition-colors duration-200 ${
-        isDarkMode ? "bg-gray-900 text-gray-100" : "bg-gray-50 text-gray-900"
+        isDarkMode ? "bg-gray-900 text-gray-100" : "bg-blue-50 text-gray-900"
       }`}
     >
       <nav

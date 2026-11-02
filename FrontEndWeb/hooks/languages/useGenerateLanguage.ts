@@ -5,7 +5,7 @@ import { useSyncExternalStore } from "react";
 const generateTexts = {
   ko: {
     headerTitle: "AI 맞춤 여행 생성 ✨",
-    headerDesc: "취향 태그를 고르고 특별한 요청사항을 입력해 보세요.",
+    headerDesc: "취향 태그를 고르고 특별한 요청사항을 입력해 보세요",
     locationLabel: "여행지",
     locationPlaceholder: "어디로 떠나시나요? (예: 도쿄, 뉴욕)",
     daysLabel: "여행 기간",
@@ -34,7 +34,7 @@ const generateTexts = {
   },
   en: {
     headerTitle: "AI Custom Trip Generator ✨",
-    headerDesc: "Choose your taste tags and enter special requests.",
+    headerDesc: "Choose your taste tags and enter special requests",
     locationLabel: "Destination",
     locationPlaceholder: "Where are you going? (e.g., Tokyo, New York)",
     daysLabel: "Duration",

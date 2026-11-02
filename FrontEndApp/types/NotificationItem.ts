@@ -1,5 +1,5 @@
 export interface NotificationItem {
-  id: number | string;
+  id: string;
   title: string;
   body: string;
   date: string;

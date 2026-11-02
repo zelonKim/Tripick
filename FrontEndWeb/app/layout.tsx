@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ZelonTrip",
-  description: "내가 원하는 맞춤 AI 여행 플래너",
+  title: "Tripick",
+  description: "AI가 픽한 맞춤 여행 플랜",
 };
 
 export default function RootLayout({

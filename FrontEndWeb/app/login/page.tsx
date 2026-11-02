@@ -53,7 +53,7 @@ export default function LoginPage() {
               isDarkMode ? "text-blue-500" : "text-blue-600"
             }`}
           >
-            ZelonTrip 🏝️
+            Tripick 🏝️
           </h1>
           <p
             className={`text-[15px] font-medium ${
@@ -137,7 +137,7 @@ export default function LoginPage() {
           </button>
         </form>
 
-        <div className="flex items-center justify-center space-x-1.5 text-sm font-medium">
+        <div className="flex items-center justify-center space-x-1.5 text-[15px] font-medium">
           <span className={isDarkMode ? "text-gray-400" : "text-gray-500"}>
             {t.noAccount}
           </span>

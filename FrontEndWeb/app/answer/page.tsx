@@ -12,7 +12,7 @@ import { useAnswerLanguage } from "@/hooks/languages/useAnswerLanguage";
 function AnswerContent() {
   const router = useRouter();
   const { isDarkMode } = useTheme();
-  const { t } = useAnswerLanguage(); 
+  const { t } = useAnswerLanguage();
 
   const searchParams = useSearchParams();
   const keyword = searchParams.get("keyword");
@@ -28,7 +28,7 @@ function AnswerContent() {
     return (
       <div
         className={`min-h-screen w-full flex flex-col justify-center items-center px-6 transition-colors ${
-          isDarkMode ? "bg-gray-900 text-gray-100" : "bg-white text-gray-900"
+          isDarkMode ? "bg-gray-900 text-gray-100" : "bg-blue-50 text-gray-900"
         }`}
       >
         <Loader2 className="w-10 h-10 animate-spin text-blue-600" />
@@ -48,7 +48,7 @@ function AnswerContent() {
   return (
     <div
       className={`min-h-screen w-full pb-8 transition-colors ${
-        isDarkMode ? "bg-gray-900 text-gray-100" : "bg-gray-50 text-gray-900"
+        isDarkMode ? "bg-gray-900 text-gray-100" : "bg-blue-50 text-gray-900"
       }`}
     >
       <div className="max-w-3xl mx-auto relative sm:px-0">

@@ -45,7 +45,7 @@ export default function GenerateScreen() {
   const { isDarkMode } = useAppTheme();
 
   const theme = {
-    container: { backgroundColor: isDarkMode ? "#111827" : "#F9FAFB" },
+    container: { backgroundColor: isDarkMode ? "#111827" : "#F0F9FF" },
     textMain: { color: isDarkMode ? "#F9FAFB" : "#111827" },
     textSub: { color: isDarkMode ? "#9CA3AF" : "#6B7280" },
     textLabel: { color: isDarkMode ? "#E5E7EB" : "#374151" },
@@ -222,7 +222,7 @@ export default function GenerateScreen() {
             AI 맞춤 여행 생성 ✨
           </Text>
           <Text style={[styles.headerSubtitle, theme.textSub]}>
-            취향 태그를 고르고 특별한 요청사항을 입력해 보세요.
+            원하는 여행 스타일을 자유롭게 선택해보세요.
           </Text>
         </View>
 
@@ -527,7 +527,7 @@ export default function GenerateScreen() {
 ////////////////////////////////////////////////////////////////////////////
 
 const styles = StyleSheet.create({
-  container: { flex: 1 },
+  container: { flex: 1, backgroundColor: "#60A5FA" },
   scrollContainer: { paddingHorizontal: 20 },
   header: { marginBottom: 24 },
   headerTitle: {

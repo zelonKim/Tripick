@@ -9,11 +9,18 @@ import { MessageSquare, Trash2 } from "lucide-react-native";
 import { formatNotificationDate } from "@/utils/formatNotificationDate";
 import { NotificationCardProps } from "@/types/NotificationCardProps";
 
-
 export const NotificationCard = memo(
-  ({ item, theme, styles, onPressItem }: NotificationCardProps) => {
+  ({
+    item,
+    theme,
+    styles,
+    onPressItem,
+    deleteNotification,
+  }: NotificationCardProps) => {
+    
     const handleDelete = (e: GestureResponderEvent) => {
       e.stopPropagation();
+      deleteNotification(item.id);
     };
 
     return (

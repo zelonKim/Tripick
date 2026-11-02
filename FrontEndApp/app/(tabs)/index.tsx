@@ -40,11 +40,11 @@ export default function HomeScreen() {
   const { isDarkMode } = useAppTheme();
 
   const theme = {
-    container: { backgroundColor: isDarkMode ? "#111827" : "#F9FAFB" },
+    container: { backgroundColor: isDarkMode ? "#111827" : "#F0F9FF" },
     textMain: { color: isDarkMode ? "#F9FAFB" : "#111827" },
     textSub: { color: isDarkMode ? "#9CA3AF" : "#4B5563" },
     iconColor: isDarkMode ? "#F9FAFB" : "#1F2937",
-    iconButtonBg: { backgroundColor: isDarkMode ? "#1F2937" : "#F3F4F6" },
+    iconButtonBg: { backgroundColor: isDarkMode ? "#1F2937" : "#E0F2FE" },
     searchBarBg: {
       backgroundColor: isDarkMode ? "#1F2937" : "#FFFFFF",
       borderColor: isDarkMode ? "#374151" : "#E5E7EB",
@@ -59,8 +59,8 @@ export default function HomeScreen() {
       borderColor: isDarkMode ? "#4B5563" : "#D1D5DB",
       color: isDarkMode ? "#F9FAFB" : "#1F2937",
     },
-    refreshButtonBg: { backgroundColor: isDarkMode ? "#1F2937" : "#F3F4F6" },
-    badgeBorderColor: { borderColor: isDarkMode ? "#1F2937" : "#F3F4F6" },
+    refreshButtonBg: { backgroundColor: isDarkMode ? "#1F2937" : "#E0F2FE" },
+    badgeBorderColor: { borderColor: isDarkMode ? "#1F2937" : "#1F2937" },
   };
 
   ///////////////////////////////////////////////////////////////////////////
@@ -116,16 +116,15 @@ export default function HomeScreen() {
 
   /////////////////////////////////////////////////////////////////////////
 
-  const handleAskLocation = () => {
-    const keyword = searchLocation.trim();
-    if (!keyword) {
+  const handleAskLocation = (query: string) => {
+    if (!query.trim()) {
       alert("여행지를 입력해 주세요!");
       return;
     }
     setModalVisible(false);
     router.push({
       pathname: "/answer",
-      params: { keyword },
+      params: { keyword: query.trim() },
     });
     setSearchLocation("");
   };
@@ -329,7 +328,7 @@ export default function HomeScreen() {
       <TouchableOpacity style={styles.banner} onPress={handleOpenGoogleMap}>
         <View>
           <Text style={styles.bannerSubtitle}>혹시, 여행 중이신가요?</Text>
-          <Text style={styles.bannerTitle}>여행 지도 켜기</Text>
+          <Text style={styles.bannerTitle}>구글 맵 켜기</Text>
         </View>
         <View style={styles.bannerIcon}>
           <ChevronRight size={24} color="#FFF" />
@@ -352,7 +351,7 @@ const styles = StyleSheet.create({
     paddingTop: 60,
     marginBottom: 20,
   },
-  locationLabel: { fontSize: 12, color: "#9CA3AF", marginBottom: 2 },
+  locationLabel: { fontSize: 12, color: "#82868d", marginBottom: 2 },
   locationSelector: {
     flexDirection: "row",
     alignItems: "center",
@@ -474,7 +473,7 @@ const styles = StyleSheet.create({
     shadowRadius: 15,
   },
   bannerSubtitle: {
-    fontSize: 14,
+    fontSize: 13,
     color: "rgba(255,255,255,0.8)",
     marginBottom: 4,
   },

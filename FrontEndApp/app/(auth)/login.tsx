@@ -42,7 +42,7 @@ export default function LoginScreen() {
       keyboardVerticalOffset={Platform.select({ ios: 30, android: 0 })}
       style={[
         styles.container,
-        { backgroundColor: isDarkMode ? "#111827" : "#FFFFFF" },
+        { backgroundColor: isDarkMode ? "#111827" : "#F0F9FF" },
       ]}
     >
       <ScrollView
@@ -50,14 +50,14 @@ export default function LoginScreen() {
         keyboardShouldPersistTaps="handled"
       >
         <View style={styles.header}>
-          <Text style={styles.title}>ZelonTrip 🏝️</Text>
+          <Text style={styles.title}>Tripick 🏝️</Text>
           <Text
             style={[
               styles.subtitle,
-              { color: isDarkMode ? "#E5E7EB" : "#6B7280" },
+              { color: isDarkMode ? "#E5E7EB" : "#595f6b" },
             ]}
           >
-            내가 원하는 맞춤 AI 여행 플래너
+            AI가 픽한 맞춤 여행 플랜
           </Text>
         </View>
 
@@ -165,8 +165,8 @@ const styles = StyleSheet.create({
     letterSpacing: -0.5,
   },
 
-  subtitle: { fontSize: 13, fontWeight: "500" },
-  inputGroup: { marginBottom: 32 },
+  subtitle: { fontSize: Platform.OS === "ios" ? 14 : 13, fontWeight: "500" },
+  inputGroup: { marginBottom: 16 },
   label: {
     fontSize: 14,
     fontWeight: "600",

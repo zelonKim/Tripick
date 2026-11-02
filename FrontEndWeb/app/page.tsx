@@ -155,7 +155,7 @@ export default function HomeContent() {
             className={`cursor-pointer relative w-11 h-11 rounded-full flex items-center justify-center transition-colors ${
               isDarkMode
                 ? "bg-gray-800 hover:bg-gray-700 text-gray-200"
-                : "bg-blue-200 hover:bg-blue-300 text-gray-800"
+                : "bg-blue-100 hover:bg-blue-200 text-gray-800"
             }`}
           >
             <Bell size={24} />
@@ -240,7 +240,7 @@ export default function HomeContent() {
               className={`cursor-pointer p-2 rounded-full transition-colors ${
                 isDarkMode
                   ? "bg-gray-800 hover:bg-gray-700"
-                  : "bg-gray-100 hover:bg-gray-200"
+                  : "bg-blue-100 hover:bg-blue-200"
               }`}
             >
               <RotateCw

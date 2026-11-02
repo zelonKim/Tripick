@@ -4,8 +4,8 @@ import { useSyncExternalStore } from "react";
 
 const signupTexts = {
   ko: {
-    title: "AI와 함께 떠나요! ✈️",
-    subtitle: "ZelonTrip과 함께 여행을 시작해볼까요?",
+    title: "지금 바로 떠나요! ✈️",
+    subtitle: "AI가 추천한 여행 플랜으로 지금 바로 떠나요.",
     emailLabel: "이메일",
     emailPlaceholder: "example@email.com",
     passwordLabel: "비밀번호",
@@ -22,8 +22,8 @@ const signupTexts = {
     alertPasswordMismatch: "비밀번호가 일치하지 않습니다.",
   },
   en: {
-    title: "Let's travel with AI ✈️",
-    subtitle: "Shall we start our journey with ZelonTrip?",
+    title: "Let's Go Now! ✈️",
+    subtitle: "Plan your trip with AI and take off right away.",
     emailLabel: "Email",
     emailPlaceholder: "example@email.com",
     passwordLabel: "Password",

@@ -6,7 +6,6 @@ import { router } from "expo-router";
 import { deactivateUser } from "@/api/user/deactivateUser";
 import { ApiErrorResponse } from "@/types/ApiError";
 
-
 export const useDeactivateUser = (options?: {
   onSuccess?: () => void;
   onError?: (errorMessage: string) => void;

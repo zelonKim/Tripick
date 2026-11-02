@@ -6,13 +6,12 @@ import { useAppTheme } from "@/utils/ThemeContext";
 
 export default function TabLayout() {
   const insets = useSafeAreaInsets();
-  const tabHeight = (Platform.OS === "ios" ? 40 : 60) + insets.bottom;
   const { isDarkMode } = useAppTheme();
+  const tabHeight = (Platform.OS === "ios" ? 55 : 65) + insets.bottom;
 
   return (
     <Tabs
       screenOptions={{
-        tabBarShowLabel: false,
         headerShown: false,
         tabBarStyle: {
           height: tabHeight,
@@ -23,6 +22,11 @@ export default function TabLayout() {
         },
         tabBarActiveTintColor: isDarkMode ? "#60A5FA" : "#2563EB",
         tabBarInactiveTintColor: isDarkMode ? "#9CA3AF" : "#6B7280",
+        tabBarLabelStyle: {
+          marginTop: 3,
+          fontSize: Platform.OS === "ios" ? 11.5 : 9.5,
+          fontWeight: "600",
+        },
       }}
     >
       <Tabs.Screen
@@ -56,7 +60,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="plans"
         options={{
-          title: "여행 계획",
+          title: "일정 조회",
           tabBarIcon: ({ focused }) => (
             <CalendarSearch
               size={25}

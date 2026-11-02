@@ -4,7 +4,7 @@ import { useSyncExternalStore } from "react";
 
 const loginTexts = {
   ko: {
-    subtitle: "내가 원하는 맞춤 AI 여행 플래너",
+    subtitle: "AI가 픽한 맞춤 여행 플랜",
     appDownload: "앱 다운로드",
     emailLabel: "이메일",
     emailPlaceholder: "이메일을 입력해주세요",
@@ -17,7 +17,7 @@ const loginTexts = {
     alertInputBoth: "이메일과 비밀번호를 모두 입력해주세요.",
   },
   en: {
-    subtitle: "Your Personalized AI Travel Planner",
+    subtitle: "AI Picked Trip Plan",
     appDownload: "App Download",
     emailLabel: "Email",
     emailPlaceholder: "Please enter your email",
@@ -45,7 +45,7 @@ export function useLoginLanguage() {
         ? "en"
         : "ko";
     },
-    () => "ko"
+    () => "ko",
   );
 
   return { t: loginTexts[locale], locale };

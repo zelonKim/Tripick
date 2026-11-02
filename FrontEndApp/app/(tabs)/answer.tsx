@@ -23,7 +23,7 @@ export default function AnswerScreen() {
   const { isDarkMode } = useAppTheme();
 
   const theme = {
-    container: { backgroundColor: isDarkMode ? "#111827" : "#F9FAFB" },
+    container: { backgroundColor: isDarkMode ? "#111827" : "#F0F9FF" },
     loadingContainer: { backgroundColor: isDarkMode ? "#111827" : "#FFFFFF" },
     textMain: { color: isDarkMode ? "#F9FAFB" : "#111827" },
     textSub: { color: isDarkMode ? "#9CA3AF" : "#4B5563" },

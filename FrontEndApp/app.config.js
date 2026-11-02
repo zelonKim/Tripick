@@ -1,6 +1,6 @@
 module.exports = {
   expo: {
-    name: "ZelonTrip",
+    name: "Tripick",
     slug: "zelontrip",
     scheme: "zelontrip",
     version: "1.0.0",

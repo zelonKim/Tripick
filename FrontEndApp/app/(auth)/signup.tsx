@@ -15,12 +15,15 @@ import { useRouter } from "expo-router";
 import { useMutation } from "@tanstack/react-query";
 import { signupApi } from "@/api/auth/signupApi";
 import { useSignup } from "@/hooks/useSignup";
+import { useAppTheme } from "@/utils/ThemeContext";
 
 export default function SignupScreen() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
+
+  const { isDarkMode } = useAppTheme();
 
   const { mutate: signupMutation, isPending } = useSignup();
 
@@ -66,23 +69,52 @@ export default function SignupScreen() {
         ios: 30,
         android: 0,
       })}
-      style={styles.container}
+      style={[
+        styles.container,
+        { backgroundColor: isDarkMode ? "#111827" : "#F0F9FF" },
+      ]}
     >
       <ScrollView
         contentContainerStyle={styles.scrollContainer}
         keyboardShouldPersistTaps="handled"
       >
         <View style={styles.header}>
-          <Text style={styles.title}>AI와 함께 떠나요! ✈️</Text>
-          <Text style={styles.subtitle}>
-            ZelonTrip과 함께 여행을 시작해볼까요?
+          <Text
+            style={[
+              styles.title,
+              { color: isDarkMode ? "#E5E7EB" : "#1e1f20" },
+            ]}
+          >
+            지금 바로 떠나요! ✈️
+          </Text>
+          <Text
+            style={[
+              styles.subtitle,
+              { color: isDarkMode ? "#999eaa" : "#535964" },
+            ]}
+          >
+            AI가 추천한 여행 플랜으로 지금 바로 떠나요.
           </Text>
         </View>
 
         <View style={styles.inputGroup}>
-          <Text style={styles.label}>이메일</Text>
+          <Text
+            style={[
+              styles.label,
+              { color: isDarkMode ? "#E5E7EB" : "#374151" },
+            ]}
+          >
+            이메일
+          </Text>
           <TextInput
-            style={styles.input}
+            style={[
+              styles.input,
+              {
+                color: isDarkMode ? "#F3F4F6" : "#111827",
+                borderColor: isDarkMode ? "#111827" : "#E5E7EB",
+                backgroundColor: isDarkMode ? "#374151" : "#F9FAFB",
+              },
+            ]}
             placeholder="example@gmail.com"
             value={email}
             onChangeText={setEmail}
@@ -92,9 +124,23 @@ export default function SignupScreen() {
             placeholderTextColor={"gray"}
           />
 
-          <Text style={styles.label}>비밀번호</Text>
+          <Text
+            style={[
+              styles.label,
+              { color: isDarkMode ? "#E5E7EB" : "#374151" },
+            ]}
+          >
+            비밀번호
+          </Text>
           <TextInput
-            style={styles.input}
+            style={[
+              styles.input,
+              {
+                color: isDarkMode ? "#F3F4F6" : "#111827",
+                borderColor: isDarkMode ? "#111827" : "#E5E7EB",
+                backgroundColor: isDarkMode ? "#374151" : "#F9FAFB",
+              },
+            ]}
             placeholder="영문+숫자 조합 8자 이상"
             value={password}
             onChangeText={setPassword}
@@ -104,9 +150,23 @@ export default function SignupScreen() {
             placeholderTextColor={"gray"}
           />
 
-          <Text style={styles.label}>비밀번호 확인</Text>
+          <Text
+            style={[
+              styles.label,
+              { color: isDarkMode ? "#E5E7EB" : "#374151" },
+            ]}
+          >
+            비밀번호 확인
+          </Text>
           <TextInput
-            style={styles.input}
+            style={[
+              styles.input,
+              {
+                color: isDarkMode ? "#F3F4F6" : "#111827",
+                borderColor: isDarkMode ? "#111827" : "#E5E7EB",
+                backgroundColor: isDarkMode ? "#374151" : "#F9FAFB",
+              },
+            ]}
             placeholder="비밀번호를 다시 입력해주세요"
             value={passwordConfirm}
             onChangeText={setPasswordConfirm}
@@ -133,7 +193,7 @@ export default function SignupScreen() {
         </TouchableOpacity>
 
         <View style={styles.loginLink}>
-          <Text style={{ color: "#6B7280" }}>이미 계정이 있으신가요?</Text>
+          <Text   style={{ color: isDarkMode ? "#E5E7EB" : "#374151", fontSize: 14 }}>이미 계정이 있으신가요?</Text>
           <TouchableOpacity
             onPress={() => router.push("/(auth)/login")}
             disabled={isPending}
@@ -149,14 +209,14 @@ export default function SignupScreen() {
 ///////////////////////////////////////////////////////////////////////////////
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#FFFFFF" },
+  container: { flex: 1, backgroundColor: "#F0F9FF" },
   scrollContainer: {
     padding: 24,
     paddingTop: Platform.OS === "ios" ? 130 : 80,
   },
   header: { marginBottom: 40 },
   title: { fontSize: 28, fontWeight: "800", color: "#111827", marginBottom: 8 },
-  subtitle: { fontSize: 15, color: "#6B7280" },
+  subtitle: { fontSize: 14, color: "#6B7280" },
   inputGroup: { marginBottom: 32 },
   label: { fontSize: 14, fontWeight: "600", color: "#374151", marginBottom: 8 },
   input: {

@@ -45,7 +45,7 @@ export default function GeneratedPlanScreen() {
   const [feedback, setFeedback] = useState("");
 
   const theme = {
-    container: { backgroundColor: isDarkMode ? "#111827" : "#F9FAFB" },
+    container: { backgroundColor: isDarkMode ? "#111827" : "#F0F9FF" },
     navBar: {
       backgroundColor: isDarkMode ? "#1F2937" : "#FFFFFF",
       borderColor: isDarkMode ? "#374151" : "#E5E7EB",
@@ -84,31 +84,6 @@ export default function GeneratedPlanScreen() {
     queryFn: () => getTripDetail(id!),
     enabled: !!id,
   });
-
-  if (isPlanPending) {
-    return (
-      <View style={[styles.container, styles.center, theme.container]}>
-        <ActivityIndicator size="large" color={theme.indicatorColor} />
-        <Text style={[styles.loadingText, theme.textSub]}>
-          상세 일정을 불러오는 중...
-        </Text>
-      </View>
-    );
-  }
-
-  if (isPlanError || !planData) {
-    return (
-      <View style={[styles.container, styles.center, theme.container]}>
-        <Text style={styles.errorText}>여행 일정을 불러올 수 없습니다. 😢</Text>
-        <Text style={[styles.errorSubText, theme.textSub]}>
-          {error?.message || "존재하지 않는 일정입니다."}
-        </Text>
-        <TouchableOpacity style={styles.backBtn} onPress={() => router.back()}>
-          <Text style={styles.backBtnText}>이전 화면으로 돌아가기</Text>
-        </TouchableOpacity>
-      </View>
-    );
-  }
 
   ///////////////////////////////////////////////////////////////////
 
@@ -200,6 +175,33 @@ export default function GeneratedPlanScreen() {
       },
     ]);
   };
+
+  ///////////////////////////////////////////////////////////////////
+
+  if (isPlanPending) {
+    return (
+      <View style={[styles.container, styles.center, theme.container]}>
+        <ActivityIndicator size="large" color={theme.indicatorColor} />
+        <Text style={[styles.loadingText, theme.textSub]}>
+          상세 일정을 불러오는 중...
+        </Text>
+      </View>
+    );
+  }
+
+  if (isPlanError || !planData) {
+    return (
+      <View style={[styles.container, styles.center, theme.container]}>
+        <Text style={styles.errorText}>여행 일정을 불러올 수 없습니다. 😢</Text>
+        <Text style={[styles.errorSubText, theme.textSub]}>
+          {error?.message || "존재하지 않는 일정입니다."}
+        </Text>
+        <TouchableOpacity style={styles.backBtn} onPress={() => router.back()}>
+          <Text style={styles.backBtnText}>이전 화면으로 돌아가기</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  }
 
   ///////////////////////////////////////////////////////////////////
 
@@ -804,7 +806,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderWidth: 1,
     paddingHorizontal: 10,
-    paddingVertical: 2,
+    paddingVertical: 6,
     borderRadius: 20,
     marginLeft: 22,
     marginTop: 3,

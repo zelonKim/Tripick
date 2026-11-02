@@ -89,6 +89,7 @@ export default function NotificationScreen() {
         theme={theme}
         styles={styles}
         onPressItem={handlePressItem}
+        deleteNotification={deleteNotification}
       />
     ),
     [theme, styles, handlePressItem, deleteNotification],

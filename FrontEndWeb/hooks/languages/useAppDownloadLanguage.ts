@@ -4,14 +4,14 @@ import { useSyncExternalStore } from "react";
 
 const appDownloadTexts = {
   ko: {
-    title: "ZelonTrip 모바일 앱 🏝️",
+    title: "Tripick 모바일 앱 🏝️",
     subtitle: "원하시는 모바일 운영체제를 선택해 주세요",
     androidTab: "Android",
     iosTab: "iOS (iPhone)",
     confirmButton: "확인",
   },
   en: {
-    title: "ZelonTrip Mobile App 🏝️",
+    title: "Tripick Mobile App 🏝️",
     subtitle: "Please select your mobile operating system",
     androidTab: "Android",
     iosTab: "iOS (iPhone)",
