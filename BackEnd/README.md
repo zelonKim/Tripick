@@ -1,7 +1,7 @@
-# 💻 ZelonTrip - BackEnd API Server (FastAPI 백엔드 서버)
+# 💻 Tripick - BackEnd API Server (FastAPI 백엔드 서버)
 
-> **FastAPI-based backend server handling AI integration, user authentication, database operations, and API orchestration for ZelonTrip.**  
-> **ZelonTrip의 AI 연동, 사용자 인증, 데이터베이스 연동 및 API 로직을 전담하는 FastAPI 기반 백엔드 서버**
+> **FastAPI-based backend server handling AI integration, user authentication, database operations, and API orchestration for Tripick**  
+> **Tripick의 AI 연동, 사용자 인증, 데이터베이스 연동 및 API 로직을 전담하는 FastAPI 기반 백엔드 서버**
 
 ---
 

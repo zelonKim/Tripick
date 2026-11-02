@@ -1,9 +1,9 @@
-# 🌐 ZelonTrip - FrontEnd Web (웹 프론트엔드)
+# 🌐 Tripick - FrontEnd Web (웹 프론트엔드)
 
-> **Web application frontend for ZelonTrip.**
+> **Web application frontend for Tripick**
 > Built on Next.js App Router, providing a responsive UI.
 >
-> **ZelonTrip의 웹 애플리케이션 프론트엔드**
+> **Tripick의 웹 애플리케이션 프론트엔드**
 > Next.js App Router를 기반으로 반응형 UI를 제공합니다.
 
 ---

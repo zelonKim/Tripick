@@ -301,7 +301,7 @@ export default function MyPageScreen() {
                 />
               ) : (
                 <Text style={[styles.statsSubText, theme.textSub]}>
-                  지금까지 ZelonTrip과 함께{" "}
+                  지금까지 Tripick과 함께{" "}
                   <Text style={styles.highlightText}>
                     {statsData?.total_location ?? 0}개
                   </Text>

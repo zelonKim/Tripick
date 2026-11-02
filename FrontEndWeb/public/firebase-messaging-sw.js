@@ -24,7 +24,7 @@ messaging.onBackgroundMessage((payload) => {
   console.log("백그라운드 푸시 수신:", payload);
 
   if (payload.notification) {
-    const notificationTitle = payload.notification.title || "ZelonTrip 알림 🎉";
+    const notificationTitle = payload.notification.title || "Tripick 알림 🎉";
     const notificationOptions = {
       body: payload.notification.body || "새로운 알림이 도착했습니다.",
       icon: "/favicon.ico",

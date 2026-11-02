@@ -4,7 +4,7 @@ import { useSyncExternalStore } from "react";
 
 const iosDownloadTexts = {
   ko: {
-    qrAlt: "ZelonTrip TestFlight QR 코드",
+    qrAlt: "Tripick TestFlight QR 코드",
     scanGuidePart1: "아이폰 카메라로 QR 코드를 스캔하면\n",
     scanGuideHighlight: "TestFlight",
     scanGuidePart2: "를 통해 앱을 설치할 수 있습니다.",
@@ -16,7 +16,7 @@ const iosDownloadTexts = {
     prerequisitePart2: " 앱이 먼저 설치되어 있어야 합니다.",
   },
   en: {
-    qrAlt: "ZelonTrip TestFlight QR Code",
+    qrAlt: "Tripick TestFlight QR Code",
     scanGuidePart1: "Scan the QR code with your iPhone camera to install the app via ",
     scanGuideHighlight: "TestFlight",
     scanGuidePart2: ".",

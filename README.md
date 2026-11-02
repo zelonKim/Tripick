@@ -1,4 +1,4 @@
-# ✈️ ZelonTrip - AI-Powered Personalized Travel Guide Platform (AI 기반 맞춤 여행 가이드 플랫폼)
+# ✈️ Tripick - AI-Powered Personalized Travel Guide Platform (AI 기반 맞춤 여행 가이드 플랫폼)
 
 > **An AI travel guide that analyzes user preferences and styles to design optimal travel itineraries and seamless routes.**  
 > Analyzes user inputs—including travel destination, MBTI, travel style, companions, transportation mode, schedule pace, and specific requests—to generate tailored travel itineraries. It also features Google Maps integration for route visualization and turn-by-turn directions, alongside native dark mode support.

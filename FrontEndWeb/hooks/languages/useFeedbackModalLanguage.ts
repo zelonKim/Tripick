@@ -6,7 +6,7 @@ const feedbackModalTexts = {
   ko: {
     title: "💬 피드백 보내기",
     description:
-      "ZelonTrip을 이용하면서 좋았던 점이나 불편했던 점을 \n 자유롭게 작성해주세요.",
+      "Tripick을 이용하면서 좋았던 점이나 불편했던 점을 \n 자유롭게 작성해주세요.",
     placeholder: "여기에 내용을 입력해 주세요 (최대 300자)",
     cancel: "취소",
     submit: "보내기",
@@ -17,7 +17,7 @@ const feedbackModalTexts = {
   en: {
     title: "💬 Send Feedback",
     description:
-      "Feel free to share what you liked or what could be improved about ZelonTrip.",
+      "Feel free to share what you liked or what could be improved about Tripick.",
     placeholder: "Please type your feedback here (Max 300 characters)",
     cancel: "Cancel",
     submit: "Send",

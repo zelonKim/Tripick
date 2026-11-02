@@ -15,7 +15,7 @@ const myPageTexts = {
     accumulatedDays: (days: number) => `⏱️ 누적 ${days}일째 여행 중`,
     footprintsTitle: "나의 여행 발자국",
     footprintsDesc: (count: number) =>
-      `지금까지 ZelonTrip과 함께 ${count}개의 여행지를 탐방했어요!`,
+      `지금까지 Tripick과 함께 ${count}개의 여행지를 탐방했어요!`,
     settingsTitle: "앱 설정 및 지원",
     darkMode: "다크모드",
     notice: "공지사항",
@@ -41,7 +41,7 @@ const myPageTexts = {
     accumulatedDays: (days: number) => `⏱️ Traveling for ${days} days total`,
     footprintsTitle: "My Travel Footprints",
     footprintsDesc: (count: number) =>
-      `You've explored ${count} destinations with ZelonTrip so far!`,
+      `You've explored ${count} destinations with Tripick so far!`,
     settingsTitle: "App Settings & Support",
     darkMode: "Dark Mode",
     notice: "Notices",

@@ -64,8 +64,8 @@ export const FeedbackModal = ({
                   { textAlign: "center" },
                 ]}
               >
-                ZelonTrip을 이용하면서 좋았던 점이나 {"\n"}불편했던 점을
-                자유롭게 작성해주세요.
+                Tripick을 이용하면서 좋았던 점이나 {"\n"}불편했던 점을 자유롭게
+                작성해주세요.
               </Text>
 
               <TextInput

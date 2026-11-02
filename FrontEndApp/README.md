@@ -1,7 +1,7 @@
-# 📱 ZelonTrip - FrontEnd Mobile App (프론트엔드 모바일 앱)
+# 📱 Tripick  - FrontEnd Mobile App (프론트엔드 모바일 앱)
 
-> **React Native and Expo-based mobile application frontend for ZelonTrip, delivering AI-powered personalized travel itinerary recommendations and location-based services.**  
-> **React Native 및 Expo 기반의 ZelonTrip 모바일 애플리케이션 프론트엔드로, AI 맞춤형 여행 일정 추천 및 위치 기반 서비스를 제공합니다.**
+> **React Native and Expo-based mobile application frontend for Tripick, delivering AI-powered personalized travel itinerary recommendations and location-based services.**  
+> **React Native 및 Expo 기반의 Tripick 모바일 애플리케이션 프론트엔드로, AI 맞춤형 여행 일정 추천 및 위치 기반 서비스를 제공합니다.**
 
 ---
 
